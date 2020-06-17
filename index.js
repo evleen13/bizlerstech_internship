@@ -57,14 +57,8 @@ function createTable(){
 	                	tabCell.innerHTML = employee[i][col[j]];
 	            }
 	        }
+	        table.setAttribute("id", "mytable");
 	        var divContainer = document.getElementById("showData");
 	        divContainer.innerHTML = "";
 	        divContainer.appendChild(table);
 		}
-$(document).ready(function(){
-  var rowCount = $('tbody tr').length;
-  if(rowCount > 4){
-    console.log(rowCount);
-    $('table').addClass('do-scroll');
-  }
-});
