@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bizlers Technologies</title>
+	<link rel="icon" type="image/png" href="./img/company_logo.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="createTable()">
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-12">
+				<img class="img-fluid img-responsive " src="./img/company_logo.png" >
+			</div>
+			<div class="col-md-5 col-9">
+				<div>
+					<h4 class="text-right">RENEE MCKELVEY</h4>
+					<h6 class="text-right">Account Settings</h6>
+				</div>
+			</div>
+			<div class="col-md-1 col-3">
+				<i class="material-icons user-icon mt-2">person</i>
+			</div>
+		</div>
+		<hr>
+		<h2 class="text-dark">User List</h2>
+		<div class="row">
+			<div class="col-12 col-md-4 pb-3">
+				<form action="">
+				<div class="input-group">
+			      <span class="input-group-addon"><i class="material-icons">search</i></span>
+			      <input id="search" type="text" class="form-control" name="search" placeholder="Search">
+			    </div>
+			</form>
+			</div>
+		</div>
+		<div class="table table-bordered">
+				<span id="showData"></span>
+		</div>
+		<table class="table table-bordered">
+		    <thead class="thead-light">
+		      <tr>
+		        <th>Name</th>
+		        <th>Role</th>
+		        <th>Actions</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>John</td>
+		        <td>Doe</td>
+		        <td><i class="material-icons">edit</i></td>
+		      </tr>
+		      <tr>
+		        <td>Mary</td>
+		        <td>Moe</td>
+		        <td><i class="material-icons">edit</i></td>
+		      </tr>
+		      <tr>
+		        <td>July</td>
+		        <td>Dooley</td>
+		        <td><i class="material-icons">edit</i></td>
+		      </tr>
+		    </tbody>
+		</table>
+		<div class="row">
+			<div class="col-md-9 col-12 ">
+				<h2 class="text-dark">New User Details</h2>
+				<hr>
+				 <form action="" class="as-validated">
+				    <div class="row p-2">
+				      <div class="col">
+				        <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+				      </div>
+				      <div class="col">
+				        <input type="text" class="form-control" placeholder="Email" name="email" id="email" required>
+				      </div>
+				    </div>
+				    <div class="row p-2">
+				      <div class="col">
+				        <input type="text" class="form-control" id="firstname" placeholder="Firstname" name="firstname" required>
+				      </div>
+				      <div class="col">
+				        <input type="text" class="form-control" placeholder="Lastname" name="lastname" id="lastname" required>
+				      </div>
+				    </div>
+				    <div class="row p-2">
+				    	<div class="col-6">
+				    		<div class="form-group">
+							  <select class="form-control" id="role" required>
+							    <option>Admin</option>
+							    <option>Developer</option>
+							    <option>Manager</option>
+							    <option>QA</option>
+							  </select>
+							</div>
+				    	</div>
+				    </div>
+				    <div class="row p-2">
+				    	<div class="col-md-6 col-12">
+				    		<div class="custom-control custom-checkbox mb-3">
+						      <input type="checkbox" class="custom-control-input" id="confirmation" name="confirmation">
+						      <label class="custom-control-label" for="confirmation">Send email confirmation</label>
+						    </div>
+				    	</div>
+				    </div>
+				</form>
+			</div>
+			<div class="col">
+				<h2>Profile Picture</h2>
+				<hr>
+				<img class="img-fluid img-responsive p-3" src="./img/default.jpg" >
+				<button class="btn btn-light btn-block">Select</button>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<button class="btn  m-2 add-user-button">Add User</button>
+			<button class="btn btn-light m-2">Cancel</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

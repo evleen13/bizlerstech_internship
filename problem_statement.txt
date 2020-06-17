@@ -1,0 +1,30 @@
+Dear candidate,
+
+Thanks for applying for this internship.
+
+To help us understand more about your skills, we are inviting you to work on a simple web application page.
+
+Screen:
+Turbo-care-assignment.png
+
+1. Need to develop the page as given.
+2. Use material design icons.
+3. You can use technology stack of your choice(JS/jQuery/Angular, CSS/SCSS, Bootstrap/foundation)
+4. Create a JSON for the user list and populate that data in the user list view, if the user list item grows more than 4 list items then list should be scrollable, along with a fixed header for list item.
+5. No need to save the new user data.
+6. Create a basic validation for the input field as follows.
+	a. All field all mandatory
+	b. First name, last name, username can be alphanumeric only
+	c. Email id should have standard email id validation
+	d. Available role value are : Admin, Developer, Manager, QA
+	e. While selecting profile picture use can only select jpg and png not more than of size 1KB.
+7. Show a success message on successful form submission.
+
+Company logo icon
+company_logo.png
+
+Try to implement the design and development best practices you are aware of.
+
+You are required to submit the assignment by evening 9:00 PM, Wednesday, 17th June 2020.
+
+Feel free to reply if you want more details.
