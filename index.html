@@ -43,10 +43,10 @@
 			</form>
 			</div>
 		</div>
-		<div class="table table-bordered">
+		<div class="table table-bordered" id="mytable">
 				<span id="showData"></span>
 		</div>
-		<table class="table table-bordered">
+		<!--<table class="table table-bordered">
 		    <thead class="thead-light">
 		      <tr>
 		        <th>Name</th>
@@ -71,26 +71,26 @@
 		        <td><i class="material-icons">edit</i></td>
 		      </tr>
 		    </tbody>
-		</table>
+		</table>-->
 		<div class="row">
 			<div class="col-md-9 col-12 ">
 				<h2 class="text-dark">New User Details</h2>
 				<hr>
-				 <form action="" class="as-validated">
+				 <form action="" class="was-validated" onsubmit="acceptData()">
 				    <div class="row p-2">
 				      <div class="col">
-				        <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+				        <input type="text" class="form-control" id="username" placeholder="Username" name="username" pattern="[a-zA-Z0-9]+" required>
 				      </div>
 				      <div class="col">
-				        <input type="text" class="form-control" placeholder="Email" name="email" id="email" required>
+				        <input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
 				      </div>
 				    </div>
 				    <div class="row p-2">
 				      <div class="col">
-				        <input type="text" class="form-control" id="firstname" placeholder="Firstname" name="firstname" required>
+				        <input type="text" class="form-control" id="firstname" placeholder="Firstname" name="firstname" pattern="[a-zA-Z0-9]+" required>
 				      </div>
 				      <div class="col">
-				        <input type="text" class="form-control" placeholder="Lastname" name="lastname" id="lastname" required>
+				        <input type="text" class="form-control" placeholder="Lastname" name="lastname" id="lastname" pattern="[a-zA-Z0-9]+" required>
 				      </div>
 				    </div>
 				    <div class="row p-2">
@@ -113,20 +113,23 @@
 						    </div>
 				    	</div>
 				    </div>
-				</form>
+				
 			</div>
 			<div class="col">
 				<h2>Profile Picture</h2>
 				<hr>
-				<img class="img-fluid img-responsive p-3" src="./img/default.jpg" >
-				<button class="btn btn-light btn-block">Select</button>
+				<img class="img-fluid img-responsive p-3" id="output" src="./img/default.jpg" ><br>
+				
+				<!--<button class="btn btn-light btn-block">Select</button>-->
 			</div>
+			<input type="file" name="myImage" id="file" accept="image/x-png,image/jpeg" required />
 		</div>
 		<hr>
 		<div class="row">
-			<button class="btn  m-2 add-user-button">Add User</button>
-			<button class="btn btn-light m-2">Cancel</button>
+			<button class="btn  m-2 add-user-button" type="submit" id="add-user-button" >Add User</button>
+			<button class="btn btn-light m-2" type="reset" >Cancel</button>
 		</div>
+	</form>
 	</div>
 	<script type="text/javascript" src="./index.js"></script>
 </body>

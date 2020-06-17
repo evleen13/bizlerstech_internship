@@ -34,6 +34,12 @@ input[type=text]:focus {
      border: 1px solid ;
      
 }*/
+.do-scroll{
+  width: 100%;
+  height: 220px; 
+  display: -moz-grid;
+  overflow-y: scroll;
+}
 table, td, th {
       border: 1px solid black;
     }

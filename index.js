@@ -1,12 +1,31 @@
 
+var uploadField = document.getElementById("file");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 1048576){
+       alert("File is too big!");
+       this.value = "";
+    }
+    else{
+    	var reader = new FileReader();
+	    reader.onload = function(){
+	      var output = document.getElementById('output');
+	      output.src = reader.result;
+	    };
+	    reader.readAsDataURL(event.target.files[0]);
+    }
+};
+function acceptData(){
+	alert("Congratulations! Validation done.")
+}
 
 function createTable(){
 			var employee= [ 
-			    { "Name": "Raja", "Role": "Pune"}, 
-			    { "Name": "Rahul", "Role": "Pune"}, 
-			    { "Name": "Ram", "Role": "Pune"},
-			    { "Name": "Ram", "Role": "Pune"},
-			    { "Name": "Ram", "Role": "Pune"}
+			    { "Name": "Adam", "Role": "Admin"}, 
+			    { "Name": "Max", "Role": "Developer"}, 
+			    { "Name": "John", "Role": "Manager"},
+			    { "Name": "Jacob", "Role": "QA"},
+			    { "Name": "Eve", "Role": "QA"}
 			];
 			//get headers
 			var col = [];
@@ -42,3 +61,10 @@ function createTable(){
 	        divContainer.innerHTML = "";
 	        divContainer.appendChild(table);
 		}
+$(document).ready(function(){
+  var rowCount = $('tbody tr').length;
+  if(rowCount > 4){
+    console.log(rowCount);
+    $('table').addClass('do-scroll');
+  }
+});
